@@ -28,6 +28,8 @@ public class Postagem {
 	
 	private String texto;
 	
+	private String criticas;
+	
 	private String foto;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -66,6 +68,13 @@ public class Postagem {
 
 	public void setTexto(String texto) {
 		this.texto = texto;
+	}
+	
+	public String getCriticas() {
+		return criticas;
+	}
+	public void setCriticas(String criticas) {
+		this.criticas = criticas;
 	}
 	
 	public String getFoto() {

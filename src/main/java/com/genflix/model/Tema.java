@@ -22,7 +22,8 @@ public class Tema{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull(message = "Atributo obrigatório")
+	private String categoria;
+    
 	private String descricao;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
@@ -38,6 +39,14 @@ public class Tema{
 
 	public void setId(long id) {
 		this.id = id;
+	}
+	
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 
 	public String getDescricao() {

@@ -48,6 +48,11 @@ public class TemaController {
 		return ResponseEntity.ok(temaRepository.findAllByDescricaoContainingIgnoreCase(descricao));
 	}
 	
+	@GetMapping("/categoria/{categoria}")
+	public ResponseEntity<List<Tema>> GetByCategoria(@PathVariable String categoria) {
+		return ResponseEntity.ok(temaRepository.findAllByCategoriaContainingIgnoreCase(categoria));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Tema> post (@RequestBody Tema tema){
 		return ResponseEntity.status(HttpStatus.CREATED)

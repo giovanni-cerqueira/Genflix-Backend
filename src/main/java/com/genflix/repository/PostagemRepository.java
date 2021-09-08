@@ -15,6 +15,7 @@ import com.genflix.model.Postagem;
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 
 	public List <Postagem> findAllByTituloContainingIgnoreCase(String titulo);
+	public List <Postagem> findAllByCriticaContainingIgnoreCase(String critica);
 
 	/**
 	 * 
@@ -24,5 +25,8 @@ public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 	
 	@Query(value = "select count(tema_id) from tb_postagens where tema_id = :id", nativeQuery = true)
 	public int countPosts2(@Param("id") long id);
+	
+	@Query(value = "select * from tb_postagens where critica is not null", nativeQuery = true)
+	public List<Postagem> criticas(); //Exibir todas as postagens que sejam críticas
 
 }
