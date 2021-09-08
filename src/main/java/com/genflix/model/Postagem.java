@@ -24,10 +24,8 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@NotNull(message = "Atributo Obrigatório")
 	private String titulo;
-
-	@NotNull(message = "Atributo Obrigatório")
+	
 	private String texto;
 	
 	private String foto;
