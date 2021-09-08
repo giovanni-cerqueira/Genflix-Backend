@@ -25,12 +25,12 @@ public class Postagem {
 	private long id;
 
 	@NotNull(message = "Atributo Obrigatório")
-	@Size(min = 5, max = 100, message = "O atributo deve conter no mínimo 05 e no máximo 100 caracteres")
 	private String titulo;
 
 	@NotNull(message = "Atributo Obrigatório")
-	@Size(min = 10, max = 500, message = "O atributo deve conter no mínimo 10 e no máximo 500 caracteres")
 	private String texto;
+	
+	private String foto;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
@@ -68,6 +68,13 @@ public class Postagem {
 
 	public void setTexto(String texto) {
 		this.texto = texto;
+	}
+	
+	public String getFoto() {
+		return foto;
+	}
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
 	public Date getData() {
