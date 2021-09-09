@@ -30,6 +30,8 @@ public class Postagem {
 	
 	private String criticas;
 	
+	private String filmes;
+	
 	private String foto;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -75,6 +77,14 @@ public class Postagem {
 	}
 	public void setCriticas(String criticas) {
 		this.criticas = criticas;
+	}
+	
+	public String getFilmes() {
+		return filmes;
+	}
+	
+	public void setFilmes(String filmes) {
+		this.filmes = filmes;
 	}
 	
 	public String getFoto() {

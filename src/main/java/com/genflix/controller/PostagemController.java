@@ -51,6 +51,11 @@ public class PostagemController {
 	public ResponseEntity<List<Postagem>> getAllCriticas(){
 		return ResponseEntity.ok(postagemRepository.criticas());
 	}
+	
+	@GetMapping("/filmes")
+	public ResponseEntity<List<Postagem>> getAllFilmes(){
+		return ResponseEntity.ok(postagemRepository.filmes());
+	}
 
 	@PostMapping
 	public ResponseEntity<Postagem> postPostagem (@RequestBody Postagem postagem){
