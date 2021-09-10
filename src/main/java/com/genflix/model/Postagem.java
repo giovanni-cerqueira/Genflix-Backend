@@ -24,13 +24,15 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	private String tituloFilme;
+	private String titulo;
 	
 	private String tituloSerie;
 	
 	private String texto;
 	
 	private String criticas;
+	
+	private String filmes;
 	
 	private String foto;
 
@@ -64,12 +66,12 @@ public class Postagem {
 		this.tituloSerie = tituloSerie;
 	}
 	
-	public String getTituloFilme() {
-		return tituloFilme;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setTituloFilme(String tituloFilme) {
-		this.tituloFilme = tituloFilme;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public String getTexto() {
@@ -85,6 +87,14 @@ public class Postagem {
 	}
 	public void setCriticas(String criticas) {
 		this.criticas = criticas;
+	}
+	
+	public String getFilmes() {
+		return filmes;
+	}
+	
+	public void setFilmes(String filmes) {
+		this.filmes = filmes;
 	}
 	
 	public String getFoto() {
