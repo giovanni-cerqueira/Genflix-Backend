@@ -26,7 +26,7 @@ public class Postagem {
 
 	private String titulo;
 	
-	private String tituloSerie;
+	private String series;
 	
 	private String texto;
 	
@@ -58,12 +58,12 @@ public class Postagem {
 		this.id = id;
 	}
 
-	public String getTituloSerie() {
-		return tituloSerie;
+	public String getSeries() {
+		return series;
 	}
 
-	public void setTituloSerie(String tituloSerie) {
-		this.tituloSerie = tituloSerie;
+	public void setSeries(String series) {
+		this.series = series;
 	}
 	
 	public String getTitulo() {

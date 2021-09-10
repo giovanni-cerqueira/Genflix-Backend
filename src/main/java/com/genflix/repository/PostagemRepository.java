@@ -17,7 +17,7 @@ public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 	public List <Postagem> findAllByTituloContainingIgnoreCase(String titulo);
 	public List <Postagem> findAllByCriticasContainingIgnoreCase(String criticas);
 	public List <Postagem> findAllByFilmesContainingIgnoreCase(String filmes);
-	public List <Postagem> findAllBySeriesContainingIgnoreCase(String series);
+	public List <Postagem> findAllBySeriesContainingIgnoreCase(String tituloSerie);
 	
 
 	/**
@@ -33,7 +33,7 @@ public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 	public List<Postagem> criticas();
 	
 	@Query(value = "select * from tb_postagens where criticas is null", nativeQuery = true)
-	public List<Postagem> filmes();
+	public List<Postagem> titulo();
 	
 	@Query(value = "select * from tb_postagens where titulo is null", nativeQuery = true)
 	public List<Postagem> series();
