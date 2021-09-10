@@ -26,6 +26,12 @@ public class Tema{
     
 	private String descricao;
 	
+	private String categoriaAdm;
+	
+	private String descricaoAdm;
+	
+	
+
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
@@ -55,6 +61,22 @@ public class Tema{
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	
+	public String getCategoriaAdm() {
+		return categoriaAdm;
+	}
+
+	public void setCategoriaAdm(String categoriaAdm) {
+		this.categoriaAdm = categoriaAdm;
+	}
+
+	public String getDescricaoAdm() {
+		return descricaoAdm;
+	}
+
+	public void setDescricaoAdm(String descricaoAdm) {
+		this.descricaoAdm = descricaoAdm;
 	}
 	
 	public List<Postagem> getPostagem() {
