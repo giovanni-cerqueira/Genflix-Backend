@@ -52,6 +52,11 @@ public class PostagemController {
 		return ResponseEntity.ok(postagemRepository.findAllByCriticasContainingIgnoreCase(criticas));
 	}
 	
+	@GetMapping("/filmes/{filmes}")
+	public ResponseEntity<List<Postagem>> getByTituloFilmes(@PathVariable String filmes){
+		return ResponseEntity.ok(postagemRepository.findAllByFilmesContainingIgnoreCase(filmes));
+	}
+	
 	@GetMapping("/series/{series}")
 	public ResponseEntity<List<Postagem>> getByTituloSeries(@PathVariable String series){
 		return ResponseEntity.ok(postagemRepository.findAllBySeriesContainingIgnoreCase(series));
