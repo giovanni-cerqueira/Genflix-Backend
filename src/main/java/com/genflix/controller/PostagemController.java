@@ -47,6 +47,11 @@ public class PostagemController {
 		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
+	@GetMapping("/criticas")
+	public ResponseEntity<List<Postagem>> getAllCriticas(){
+		return ResponseEntity.ok(postagemRepository.criticas());
+	}
+	
 	@GetMapping("/criticas/{criticas}")
 	public ResponseEntity<List<Postagem>> getAllCriticas(@PathVariable String criticas){
 		return ResponseEntity.ok(postagemRepository.findAllByCriticasContainingIgnoreCase(criticas));
