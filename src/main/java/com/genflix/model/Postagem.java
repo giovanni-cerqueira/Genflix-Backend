@@ -34,9 +34,8 @@ public class Postagem {
 	
 	private String filmes;
 	
-	private String fotoFilme;
+	private String foto;
 	
-	private String fotoSerie;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
@@ -100,20 +99,12 @@ public class Postagem {
 		this.filmes = filmes;
 	}
 
-	public String getFotoFilme() {
-		return fotoFilme;
+	public String getFoto() {
+		return foto;
 	}
 
-	public void setFotoFilme(String fotoFilme) {
-		this.fotoFilme = fotoFilme;
-	}
-
-	public String getFotoSerie() {
-		return fotoSerie;
-	}
-
-	public void setFotoSerie(String fotoSerie) {
-		this.fotoSerie = fotoSerie;
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
 	public Date getData() {
