@@ -34,7 +34,9 @@ public class Postagem {
 	
 	private String filmes;
 	
-	private String foto;
+	private String fotoFilme;
+	
+	private String fotoSerie;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
@@ -49,13 +51,21 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Usuario usuario;
-		
+
 	public long getId() {
 		return id;
 	}
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public String getSeries() {
@@ -65,14 +75,6 @@ public class Postagem {
 	public void setSeries(String series) {
 		this.series = series;
 	}
-	
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
 
 	public String getTexto() {
 		return texto;
@@ -81,27 +83,37 @@ public class Postagem {
 	public void setTexto(String texto) {
 		this.texto = texto;
 	}
-	
+
 	public String getCriticas() {
 		return criticas;
 	}
+
 	public void setCriticas(String criticas) {
 		this.criticas = criticas;
 	}
-	
+
 	public String getFilmes() {
 		return filmes;
 	}
-	
+
 	public void setFilmes(String filmes) {
 		this.filmes = filmes;
 	}
-	
-	public String getFoto() {
-		return foto;
+
+	public String getFotoFilme() {
+		return fotoFilme;
 	}
-	public void setFoto(String foto) {
-		this.foto = foto;
+
+	public void setFotoFilme(String fotoFilme) {
+		this.fotoFilme = fotoFilme;
+	}
+
+	public String getFotoSerie() {
+		return fotoSerie;
+	}
+
+	public void setFotoSerie(String fotoSerie) {
+		this.fotoSerie = fotoSerie;
 	}
 
 	public Date getData() {
@@ -112,20 +124,20 @@ public class Postagem {
 		this.data = data;
 	}
 
-	public Tema getTema() {
-		return tema;
-	}
-
-	public void setTema(Tema tema) {
-		this.tema = tema;
-	}
-
 	public int getCurtidas() {
 		return curtidas;
 	}
 
 	public void setCurtidas(int curtidas) {
 		this.curtidas = curtidas;
+	}
+
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
 	}
 
 	public Usuario getUsuario() {
@@ -135,10 +147,5 @@ public class Postagem {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
-	
-	
-	
-
 	
 }
